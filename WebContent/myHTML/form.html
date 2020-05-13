@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../myCSS/mystuff.css" />
+		<link rel="stylesheet" href="../myCSS/myhead.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+		
+	
+	</head>
+	
+	<body data-spy="scroll" data-target="#myScrollspy">
+		<div class="system_head">
+			<div class="system_title">
+				工资管理系统
+			</div>
+			
+			<!--
+            	作者：offline
+            	时间：2019-06-25
+            	描述：导航栏
+            -->
+			<div class="system_navi">
+  				<div class="btn-group btn-group-justified" id="myButtonGroup">
+    				<button type="button" class="btn">首页</button>
+    				<button type="button" class="btn">员工管理</button>
+    				<button type="button" class="btn">考勤管理</button>
+    				<div class="btn-group">
+      					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="background-color: #A94442;">
+      					工资管理 <span class="caret"></span></button>
+      					<ul class="dropdown-menu" role="menu">
+        					<li><a href="#">工资项目</a></li>
+        					<li><a href="#">固定工资</a></li>
+        					<li><a href="#">工资结算</a></li>
+      					</ul>
+    				</div>
+    				<button type="button" class="btn"  style="background: linear-gradient(#255625, #5CB85C);color: white;">报表</button>
+  				</div>
+			</div>
+		</div>
+		
+		<div class="container" style="width:100%;padding-left: 0;padding-right: 5%;">
+    		<div class="row">
+        		<div class="col-xs-2" id="myScrollspy" >
+            		<ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125" style="text-align: center;">
+                		<li class="active"><a href="#section-1">工资查询报表</a></li>
+                		<li><a href="#section-2">员工报表</a></li>
+               			<li><a href="#section-3">部门报表</a></li>
+               			<li><a href="#section-4">公司报表</a></li>
+            		</ul>
+        	</div>
+        	
+        	<div class="col-xs-10">
+        	    <h2 id="section-1">工资查询报表</h2>
+				<div>
+					
+					<div class="myQuery">
+					<div style="display: inline">
+						部门：
+						<select >
+							<option>人力资源部</option>
+							<option>财务部</option>
+							<option>生产技术部</option>
+							<option>计划营销部</option>
+							<option>安全监察部</option>
+							<option>宣传部</option>
+							<option>后勤部</option>
+						</select>
+						<button class="btn" onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						编号：
+						<input class="s1" />
+						<button class="btn " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						工资范围/元：
+						<input placeholder="low" />
+						~
+						<input placeholder="high" />
+						<button class="btn " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					
+						
+					
+				</div>	
+					<div style="overflow:auto;">
+						<table class="table table-hover table-bordered" id="mytable_1">
+							<caption style="text-align: center; font-size: 18px;">悬停表格布局</caption>
+							<thead>
+								<tr>
+									<th>名称</th>
+									<th>城市</th>
+									<th>邮编</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+            	<hr>
+            
+            
+            	<h2 id="section-2">员工统计报表</h2>
+            	<div>
+					
+					<div class="myQuery">
+					<div style="display: inline">
+						部门：
+						<select >
+							<option>人力资源部</option>
+							<option>财务部</option>
+							<option>生产技术部</option>
+							<option>计划营销部</option>
+							<option>安全监察部</option>
+							<option>宣传部</option>
+							<option>后勤部</option>
+						</select>
+						<button class="btn " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						编号：
+						<input class="s1" />
+						<button class="btn " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						工资范围/元：
+						<input placeholder="low" />
+						~
+						<input placeholder="high" />
+						<button class="btn " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					
+						
+					
+				</div>	
+					<div style="overflow:auto;">
+						<table class="table table-hover table-bordered" id="mytable_2">
+							<caption style="text-align: center; font-size: 18px;">悬停表格布局</caption>
+							<thead>
+								<tr>
+									<th>名称</th>
+									<th>城市</th>
+									<th>邮编</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+            	<hr>
+            
+            
+            	<h2 id="section-3">部门统计报表</h2>
+            	<div>
+					
+					<div class="myQuery">
+					<div style="display: inline">
+						部门：
+						<select >
+							<option>人力资源部</option>
+							<option>财务部</option>
+							<option>生产技术部</option>
+							<option>计划营销部</option>
+							<option>安全监察部</option>
+							<option>宣传部</option>
+							<option>后勤部</option>
+						</select>
+						<button class="btn " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						编号：
+						<input class="s1" />
+						<button class="btn " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						工资范围/元：
+						<input placeholder="low" />
+						~
+						<input placeholder="high" />
+						<button class="btn" onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					
+						
+					
+				</div>	
+					<div style="overflow:auto;">
+						<table class="table table-hover table-bordered" id="mytable_3">
+							<caption style="text-align: center; font-size: 18px;">悬停表格布局</caption>
+							<thead>
+								<tr>
+									<th>名称</th>
+									<th>城市</th>
+									<th>邮编</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+            	<hr>
+            	
+            	<h2 id="section-4">公司统计报表</h2>
+            	<div>			
+					<div class="myQuery">
+						<div style="display: inline">
+							部门：
+							<select >
+								<option>人力资源部</option>
+								<option>财务部</option>
+								<option>生产技术部</option>
+								<option>计划营销部</option>
+								<option>安全监察部</option>
+								<option>宣传部</option>
+								<option>后勤部</option>
+							</select>
+							<button class="btn " onclick="">					
+	          					<span class="glyphicon glyphicon-search"></span>
+							</button>	
+						</div>
+						<div style="display: inline">
+							编号：
+							<input class="s1" />
+							<button class="btn " onclick="">					
+	          					<span class="glyphicon glyphicon-search"></span>
+							</button>	
+						</div>
+						<div style="display: inline">
+							工资范围/元：
+							<input placeholder="low" />
+							~
+							<input placeholder="high" />
+							<button class="btn " onclick="">					
+	          					<span class="glyphicon glyphicon-search"></span>
+							</button>	
+						</div>
+						
+							
+						
+					</div>	
+					<div style="overflow:auto;">
+						<table class="table table-hover table-bordered"  id="mytable_4">
+							<caption style="text-align: center; font-size: 18px;">悬停表格布局</caption>
+							<thead>
+								<tr>
+									<th>名称</th>
+									<th>城市</th>
+									<th>邮编</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+								<tr>
+									<td>Tanmay</td>
+									<td>Bangalore</td>
+									<td>560001</td>
+								</tr>
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+            	<hr>
+        	</div>
+    	</div>
+	</div>
+</body>
+	
+	<script>
+		function changeToEditable(){
+			
+		}
+		
+		function changeToUneditable(){
+		
+		}
+		
+	</script>
+</html>

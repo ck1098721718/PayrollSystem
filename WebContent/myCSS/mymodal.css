@@ -1,0 +1,28 @@
+.myUl_model{
+	list-style-type: none;
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+.myUl_model .myLi_modal{
+	height: 70px;
+}
+
+.myUl_model span{
+	font-family: "宋体";
+	font-size: 20px;
+}
+
+.myUl_model div{
+	
+}
+
+.myUl_model input{
+	width: 170px;
+	border-radius: 10px;
+	font-size: 14px;
+	padding-left: 10px;
+	font-family: "微软雅黑";
+}
+
+

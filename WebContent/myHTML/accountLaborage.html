@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../myCSS/myhead.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../myCSS/mytable.css" />
+		<link rel="stylesheet" href="../myCSS/mymodal.css" />
+	</head>
+	<body>
+		<div class="system_head">
+			<div class="system_title">
+				工资管理系统
+			</div>
+			
+			<!--
+            	作者：offline
+            	时间：2019-06-25
+            	描述：导航栏
+            -->
+			<div class="system_navi">
+  				<div class="btn-group btn-group-justified" id="myButtonGroup" style="bottom: 3px;">
+    				<button type="button" class="btn "><a href="">首页</a></button>
+    				<button type="button" class="btn ">员工管理</button>
+    				<button type="button" class="btn ">考勤管理</button>
+    				<div class="btn-group">
+      					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="background: linear-gradient(#255625, #5CB85C);color: white;" >
+      					工资管理 <span class="caret"></span></button>
+      					<ul class="dropdown-menu" role="menu">
+        					<li><a href="#">工资项目</a></li>
+        					<li><a href="#">固定工资</a></li>
+        					<li><a href="#" style="background-color:#DDDDDD;">工资结算</a></li>
+      					</ul>
+    				</div>
+    				<button type="button" class="btn ">报表</button>
+  				</div>
+			</div>
+		</div>
+		
+		<!--
+        	作者：offline
+        	时间：2019-06-25
+        	描述：主体内容
+        -->
+		<div class="system_containter">
+			<div class="table_head">
+				<div id="table_head_title" >工资结算表</div>
+				<div>
+					<button class="btn btn-lg" data-toggle="modal" data-target="#myModal" style="float: right; margin-right: 20px; margin-top: 10px;background-color: #B2DBA1; color: #2B542C;" >					
+          					<span class="glyphicon glyphicon-search"></span> 查询
+					</button>				
+				</div>
+			
+			</div>
+			
+			<!--
+            	作者：offline
+            	时间：2019-06-25
+            	描述：表格
+            -->
+			<div>
+				<div style="padding: 0px 150px;" >
+					<table class="table table-striped table-bordered" id="mytable" >
+					<!--<caption>条纹表格布局</caption>-->
+						<thead>
+							<tr>
+								<th>部门	</th>
+								<th>编号</th>
+								<th>姓名</th>
+								<th>实发工资/元</th>
+								<th>固定工资/元</th>
+								<th>养老保险/元</th>
+								<th>操作</th>					
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>人力资源部</td>
+								<td>1001</td>
+								<td>章若云</td>
+								<td>10000</td>
+								<td>20000</td>
+								<td>30000</td>
+								<td style="width: 40px;">
+									<input value="发放" onclick="distribute(this)" readonly="readonly"/>
+								</td>
+								
+								<!--/*已发放的标志*/-->
+								<!--<td style="width: 40px;">
+									<input value="已发放" readonly="readonly" style="opacity: 0.6;"/>
+								</td>-->
+								
+							</tr>
+							<tr>
+								<td>财务部</td>
+								<td>2001</td>
+								<td>龙腾</td>
+								<td>30000</td>
+								<td>20000</td>
+								<td>30000</td>
+								<td style="width: 40px;">
+									<input value="发放" onclick="distribute(this)" readonly="readonly"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+				
+				<!--
+                	作者：offline
+                	时间：2019-06-25
+                	描述：分页选择栏
+                -->
+				<div>
+					<ul class="pagination" id="table_page_divide">
+						<li><a id="lengthoflist">总数</a></li>
+						<li><a id="btn0">当前</a></li>
+						<li><a id="btn1">首页</a></li>						
+						<li><a id="btn2">&laquo;</a></li>						
+						<li><a id="btn3">&raquo;</a></li>
+						<li><a id="btn4">尾页</a></li>
+						<li><a>转到<input id="changePage" type="text" style="width: 30px;height: 20px;"/>页</a>
+						<a id="btn5">跳转</a></li>
+					</ul>
+					
+				</div>
+			</div>
+			
+			<!--
+            	作者：offline
+            	时间：2019-06-25
+            	描述：模态框--选择部门日期
+            -->
+			<div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close"  data-dismiss="modal" aria-hidden="true">
+							&times;
+							</button>
+							<h4 class="modal-title">
+								<span class="glyphicon glyphicon-search"></span>
+								查询
+							</h4>
+						</div>
+						<div class="modal-body" style="padding: 10px 120px ;  ">
+							<div style="border: double #C1E2B3 5px; background-color: #EAF2D3;">
+								<form action="" method="get">
+								<ul class="center-block myUl_model">
+									<li class="myLi_modal">										
+										<div>
+										<span>项目类型:</span>
+											<select class="form-control" name="department" style=" width: 150px; display: inline;">
+												<option>人力资源部</option>
+												<option>财务部</option>
+												<option>生产技术部</option>
+												<option>计划营销部</option>
+												<option>安全监察部</option>
+												<option>宣传部</option>
+												<option>后勤</option>
+											</select>
+										</div>
+										
+									</li>
+									<li  class="myLi_modal">
+										<div>
+											<span>开始日期:</span>										
+											<input type="text" placeholder="请输入开始日期xxxx-xx" name="date_start">
+											</input>
+										</div>																				
+									</li>
+									<li  class="myLi_modal">
+										<div>
+											<span>结束日期:</span>										
+											<input type="text" placeholder="请输入结束日期xxxx-xx" name="date_begin">
+											</input>
+										</div>																				
+									</li>
+									
+								</ul>
+								</form>
+							</div>
+						
+						</div>
+						<div class="modal-footer">
+							
+							<button type="button" class="btn btn-primary" onclick="check()" style="width: 100px;">
+								查询
+							</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+			</div>
+			
+			
+	</body>
+	
+	<script>
+		
+		/*一进界面便打开模态框*/
+		$(function(){ 
+			$('#myModal').modal('show');
+		});
+		
+		function distribute(obj){
+			obj.value="已发放";
+			$(obj).css("opacity","0.6");
+		}
+		
+		function check(){
+			$('#myModal').modal('hide');
+		}
+		
+	</script>
+</html>

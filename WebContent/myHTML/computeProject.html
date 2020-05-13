@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../myCSS/myformula.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="formula_head">
+			<button class="btn btn-info">					
+          		<span class="glyphicon glyphicon-circle-arrow-left" ></span>
+			</button>	
+		</div>
+		<div>
+			<button class="btn btn-primary btn-lg" onclick="save()" style="float: right; margin-right: 5%; margin-top: 30px;">					
+          		<span class="glyphicon glyphicon-saved"></span> 保存
+			</button>	
+					
+		</div>
+		
+		<div style="margin: 10px 15%;">
+			
+			<div class="main_content">
+				<table class="table table-hover" id="my_formula_table">
+  					<tbody>
+    					<tr>
+      						<td>
+      							<input class="formula_input1" readonly="readonly" value="养老保险基金"/>
+      						</td>
+      						<td>
+      							<input class="formula_equality" readonly="readonly" value="="/>
+      						</td>
+      						<td>
+      							<select class="s1">
+      								<option>基本工资</option>
+      								<option>附加工资</option>
+      							</select>
+      						</td>
+      						<!--替代的input-->
+      						<!--<td>
+      							<input class="formula_input2" value="基本工资范围"/>
+      						</td>-->
+      						<td>
+      							<select class="s2">
+      								<option>+</option>
+      								<option>-</option>
+      								<option>*</option>
+      								<option>/</option>
+      							</select>
+      						</td>
+      						<td>
+      							<input class="formula_input2" />
+      						</td>
+    					</tr>
+    					
+  					</tbody>
+				</table>
+			</div>
+						
+		</div>	
+		
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    		<div class="modal-dialog">
+        		<div class="modal-content">
+            		<div class="modal-header">
+                		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                		<h6 class="modal-title" id="myModalLabel">计算工资设置</h4>
+            		</div>
+            	<div class="modal-body" style="text-align: center;">
+            		<h2 style="color: #245269;">修改成功！</h3>
+            	</div>
+            		<div class="modal-footer">
+                		<button type="button" class="btn btn-default" data-dismiss="modal">继续修改</button>
+                		<button type="button" class="btn btn-primary"><a href="#" style="text-decoration: none;color: white;">返回</a></button>
+            		</div>
+        		</div><!-- /.modal-content -->
+    		</div><!-- /.modal -->
+		</div>
+			
+	</body>
+	
+	<script>
+		
+		function save(){ 
+			$('#myModal').modal('show');
+		}
+		
+	</script>
+</html>

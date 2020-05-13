@@ -1,0 +1,116 @@
+.myQuery{
+	font-size: 18px;
+	padding: 20px 5% 0;
+	text-align: center;
+}
+
+.myQuery div{
+	margin-left: 2%;
+	margin-right: 2%;
+	display: inline-block;
+}
+
+.myQuery input{
+	width:70px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #B2DBA1;
+	border-radius: 5px;
+}
+
+.myQuery .s1{
+	width: 55px;
+}
+
+.myQuery select{
+	width: 80px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #D6E9C6;
+	border-radius: 5px;
+}
+
+.s6 .myQuery select{
+	width: 130px;
+}
+
+#myScrollspy ul.nav-tabs{
+    width: 140px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border:double 5px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+#myScrollspy ul.nav-tabs li{
+    margin: 0;
+    border-top: 1px solid #ddd;
+    background-color: #FFFFFF;
+}
+#myScrollspy ul.nav-tabs li:first-child{
+    border-top: none;
+}
+
+#myScrollspy ul.nav-tabs li a{
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 0;
+    color: #398439;
+	font-size: 16px;    
+}
+#myScrollspy ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+    color: #fff;
+    background: #67B168;
+    border: 1px solid #67B168;
+}
+#myScrollspy ul.nav-tabs li:first-child a{
+    border-radius: 6px 6px 0 0;
+}
+#myScrollspy ul.nav-tabs li:last-child a{
+    border-radius: 0 0 6px 6px;
+}
+#myScrollspy ul.nav-tabs.affix{
+    top: 30px; /* Set the top position of pinned element */
+}
+
+
+.responsive .my_img {
+    margin: 2%;
+    border: 1px solid #ccc;
+    float: left;
+    width: 120px;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.responsive .my_img:hover {
+    width: 130px;
+    height: 190px;
+    box-shadow: 0 0 20px #245269;
+    
+}
+
+.responsive .my_img img {
+    width: 100%;
+    height: 80%;
+}
+
+.responsive .desc {
+	padding: 5px;
+    text-align: center;
+}
+
+.responsive .desc span{
+	 font-size: 16px;
+	 font-weight:900;
+}
+
+#my_add_stuff{
+	background-color: #B2DBA1;
+	border-style: none;
+	margin-left:10px;
+	
+}
+
+#my_add_stuff:hover{
+	background-color: #67B168;
+}

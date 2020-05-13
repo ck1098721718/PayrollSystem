@@ -1,0 +1,114 @@
+﻿.system_head{
+	top:0px;
+	width: 0px;
+	height: 120px;
+	width: 100%;
+	position: relative;
+	/*background-color: #D6E9C6;*/
+	background: linear-gradient(#5CB85C, #D6E9C6);
+}
+
+.system_title{
+	text-align:left;
+	font-family: "宋体";
+	color: #FFFFFF;
+	position: absolute;
+	font-size: 44px;
+	padding: 20px 30px;
+	text-shadow:5px 5px 10px #000000;
+}
+
+.system_exit{
+	text-align: center;
+	float: right;
+	width: 80px;
+	height: 35px;
+	background-color: transparent;
+	margin-right: 10px;
+	margin-top: 5px;
+	padding-top: 3px;
+	font-size: 20px;
+	border-radius: 10px;
+	color: white;
+}
+
+.system_exit:hover{
+	background-color: #255625;
+}
+
+
+.system_navi{
+	background-color: #DFF0D8;
+	/*background: linear-gradient(#255625, #5CB85C)*/;
+	height: 60px;
+	bottom:0px;
+	right: 10px;
+	position: absolute;
+	width: 60%;
+	float: right;
+	padding-left: 50px;
+	padding-top:16px ;
+	padding-right: 10px;
+	-moz-border-radius: 50px 0 0 0;      /* Gecko browsers */
+	-webkit-border-radius: 50px 0 0 0;   /* Webkit browsers */
+	border-radius:50px 0 0 0;            /* W3C syntax */
+}
+
+.system_navi button{
+	height: 40px;
+	font-size: 17px;
+	background: radial-gradient(#398439, #DFF0D8);
+	/*background: radial-gradient(#DFF0D8, #398439);*/
+	/*color: #255625;*/
+	color: #FFFFFF;
+	border: none;
+	border-radius: 30px;
+}
+
+.system_navi button:hover{
+	background: linear-gradient(#255625, #5CB85C);
+	/*border-bottom: none;*/
+	color: white;
+}
+
+.system_navi a{
+	color: #255625;
+	text-decoration: none;
+}
+
+.system_navi a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+#myCarousel img{
+	width: 100%;
+	height:100%;
+	opacity:0.6;
+}
+
+#myCarousel2 img{
+	width: 100%;
+	height:100%;
+}
+
+#myCarousel2 p{
+	color: #FFFFFF;
+	text-align:center ;
+	font-size: 66px;
+	font-family:"微软雅黑";
+	bottom:200px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-shadow: #FFFFFF;
+	text-decoration: blink;
+	text-shadow: 0.1em 0.1em 0.1em #000000;
+	-webkit-text-fill-color: #FFFFFF;
+	-webkit-text-stroke: 2px #9ACFEA;
+	letter-spacing: 20px;
+	font-style: italic;
+	/*text-decoration:underline;*/
+	border-bottom: double 20px #9ACFEA; 
+}
+

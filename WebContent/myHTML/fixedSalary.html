@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../myCSS/mytable.css" />
+		<link rel="stylesheet" href="../myCSS/myhead.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+	
+	</head>
+	<body>
+		<div class="system_head">
+			<div class="system_title">
+				工资管理系统
+			</div>
+			
+			<!--
+            	作者：offline
+            	时间：2019-06-25
+            	描述：导航栏
+            -->
+			<div class="system_navi">
+  				<div class="btn-group btn-group-justified" id="myButtonGroup">
+    				<button type="button" class="btn">首页</button>
+    				<button type="button" class="btn">员工管理</button>
+    				<button type="button" class="btn">考勤管理</button>
+    				<div class="btn-group">
+      					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="background: linear-gradient(#255625, #5CB85C);color: white;">
+      					工资管理 <span class="caret"></span></button>
+      					<ul class="dropdown-menu" role="menu">
+        					<li><a href="#">工资项目</a></li>
+        					<li><a href="#" style="background-color: #DDDDDD;">固定工资</a></li>
+        					<li><a href="#">工资结算</a></li>
+      					</ul>
+    				</div>
+    				<button type="button" class="btn">报表</button>
+  				</div>
+			</div>
+		</div>
+		
+		<!--
+        	作者：offline
+        	时间：2019-06-25
+        	描述：主体内容
+        -->
+		<div class="system_containter">
+			<div class="table_head">
+				<div id="table_head_title" >固定工资项目表</div>
+				<div>
+					
+					<button class="btn btn-primary btn-lg" onclick="changeToUneditable()" style="float: right; margin-right: 8%; margin-top: 10px;">					
+          					<span class="glyphicon glyphicon-saved"></span> 保存所有
+					</button>	
+					<button class="btn btn-default" onclick="changeToEditable()" style="float: right; margin-right: 2%; margin-top: 15px;">					
+          					<span class="glyphicon glyphicon-refresh"></span> 编辑
+					</button>
+				</div>
+			
+			</div>
+			
+			<!--
+            	作者：offline
+            	时间：2019-06-25
+            	描述：表格
+            -->
+			<div>
+			
+				<div style="height:400px;overflow:auto; padding-left:5%;padding-right: 5%;" >
+					<table class="table table-striped " id="mytable" style=" text-align: center;border: none;" >
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>项目类型</th>
+								<th>名称</th>
+								<th>xxxxxx</th>
+								<th>xxxxxx</th>
+								<th>xxxx</th>
+								<th>xxxx</th>
+								<th>xxxxxx</th>
+								<th>xxxxxx</th>
+							</tr>
+							
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>固定项目</td>
+								<td>基本工资</td>
+								<td><input value="1000.23" readonly="true" style="border-width: 0px;"/></td>
+								<td><input value="1000.31" readonly="true" style="border-width: 0px;"/></td>
+								<td><input value="1000" readonly="true" style="border-width: 0px;"/></td>
+								<td><input value="1000" readonly="true" style="border-width: 0px;"/></td>
+								<td><input value="100310" readonly="true" style="border-width: 0px;"/></td>
+								<td><input value="10003" readonly="true" style="border-width: 0px;"/></td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="myQuery">
+					<div style="display: inline">
+						部门：
+						<select >
+							<option>人力资源部</option>
+							<option>财务部</option>
+							<option>生产技术部</option>
+							<option>计划营销部</option>
+							<option>安全监察部</option>
+							<option>宣传部</option>
+							<option>后勤部</option>
+						</select>
+						<button class="btn btn-primary " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						编号：
+						<input class="s1" />
+						<button class="btn btn-primary " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					<div style="display: inline">
+						工资范围/元：
+						<input placeholder="low" />
+						~
+						<input placeholder="high" />
+						<button class="btn btn-primary " onclick="">					
+          					<span class="glyphicon glyphicon-search"></span>
+						</button>	
+					</div>
+					
+						
+					
+				</div>	
+			</div>
+		</div>
+			
+		
+	</body>
+	
+	<script>
+		function changeToEditable(){
+			var table_inputs=document.getElementById("mytable").getElementsByTagName("input");
+			for(var i=0;i<table_inputs.length;i++){
+				table_inputs[i].removeAttribute("readonly");
+				$(table_inputs[i]).css("border-width","2px");
+			}
+			
+		}
+		
+		function changeToUneditable(){
+			var table_inputs=document.getElementById("mytable").getElementsByTagName("input");
+			for(var i=0;i<table_inputs.length;i++){				
+				$(table_inputs[i]).attr("readonly","readonly");
+				$(table_inputs[i]).css("border-width","0px");
+			}
+		}
+		
+	</script>
+</html>

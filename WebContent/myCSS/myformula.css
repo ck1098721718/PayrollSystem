@@ -1,0 +1,73 @@
+body{
+    background: url("../img/d3.jpg") no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    /*-webkit-filter: blur(4px);
+    filter: blur(4px);*/
+}
+
+.formula_head{
+	padding: 10px;
+	padding-left: 30px;
+	width: 100%;
+	height:60px;
+	border-bottom-style: double;
+	border-bottom-width:10px ;
+	border-bottom-color: #FFFFFF;
+	box-shadow:0 5px 8px -7px #245269;
+}
+
+.main_content{
+	border: double;
+	border-width: 10px;
+	border-radius: 10px;
+	border-color: #9ACFEA;
+	background-color: #F9F9F9;
+	padding: 10px 15%;
+	height:550px;
+	overflow:auto;
+}
+
+#my_formula_table{
+	font-size: 20px;
+	color: #245269;
+	
+}
+
+#my_formula_table input{
+	text-align: center;
+	height:35px;
+	border: 8px;
+}
+
+
+#my_formula_table .formula_input1{
+	background-color: transparent;
+	border-style: none;
+	width: 160px;
+	
+}
+
+#my_formula_table .formula_equality{
+	font-size: 40px;
+	width: 35px;	
+	background-color: transparent;
+}
+#my_formula_table select{
+	border-style: double;
+	border-color: #9ACFEA;
+	padding: auto 10px;
+	
+}
+
+#my_formula_table .formula_input2{
+	width: 130px;
+	border-style: double;
+	border-color: #9ACFEA;
+	border-width:3px ;
+}
+
+
+
+
